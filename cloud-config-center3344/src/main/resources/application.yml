@@ -14,6 +14,7 @@ spring:
           - springcloud-config
       ####读取分支
       label: master
+
 #rabbitmq相关配置
 rabbitmq:
   host: localhost
@@ -30,6 +31,8 @@ eureka:
     # 别名
     instance-id: configcenter
     prefer-ip-address: true
+
+
 ##rabbitmq相关配置,暴露bus刷新配置的端点
 management:
   endpoints: #暴露bus刷新配置的端点

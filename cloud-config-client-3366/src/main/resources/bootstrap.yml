@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -25,7 +25,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: configclient3355
+    instance-id: configclient3366
     prefer-ip-address: true
 
 # 暴露监控端点
