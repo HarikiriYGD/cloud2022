@@ -1,6 +1,5 @@
 package com.swjtu.springcloud.service;
 
-import cn.hutool.core.util.IdUtil;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
