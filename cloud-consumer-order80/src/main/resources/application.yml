@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: cloud-order-service
+  zipkin:
+    # 监控的数据在哪里看 zipkin的地址
+    base-url: http://localhost:9411
+    sleuth:
+      sampler:
+      #采样率值介于 0 到 1 之间，1 则表示全部采集
+        probability: 1
 
 eureka:
   client:
