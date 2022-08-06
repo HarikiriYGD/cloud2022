@@ -13,6 +13,10 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ApplicationContextBean {
 
+    /**
+     * @LoadBalanced: Ribbon实现负载均衡
+     * @return
+     */
     @Bean
     @LoadBalanced
     public RestTemplate getRestTemplate(){
