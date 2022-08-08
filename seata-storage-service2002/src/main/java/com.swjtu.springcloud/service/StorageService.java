@@ -15,6 +15,6 @@ public interface StorageService {
      * @param count
      * @return
      */
-    int decrease(@Param("productId") Long productId, @Param("count") Integer count);
+    int decrease(Long productId, Integer count);
 
 }

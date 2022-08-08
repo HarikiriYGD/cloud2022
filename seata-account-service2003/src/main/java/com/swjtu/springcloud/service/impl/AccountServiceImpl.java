@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: Lil_boat
@@ -21,10 +22,11 @@ public class AccountServiceImpl implements AccountService {
     private AccountDao accountDao;
 
     @Override
-    public int decrease(Long userId, BigDecimal money) {
+    public void decrease(Long userId, BigDecimal money) {
         log.info("------->账户金额减少开始");
-        int result = accountDao.decrease(userId, money);
+        // 模拟超时异常
+        try { TimeUnit.SECONDS.sleep(20); } catch (InterruptedException e){ e.printStackTrace(); }
+        accountDao.decrease(userId, money);
         log.info("------->账户金额减少结束");
-        return result;
     }
 }

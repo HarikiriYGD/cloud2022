@@ -5,6 +5,7 @@ import com.swjtu.springcloud.mapper.OrderMapper;
 import com.swjtu.springcloud.service.AccountService;
 import com.swjtu.springcloud.service.OrderService;
 import com.swjtu.springcloud.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,7 @@ public class OrderServiceImpl implements OrderService {
     private StorageService storageService;
 
     @Override
+    @GlobalTransactional(name = "fsp_create_order", rollbackFor = Exception.class)
     public void create(Order order) {
         log.info("---->开始新建订单");
         int result = orderMapper.create(order);

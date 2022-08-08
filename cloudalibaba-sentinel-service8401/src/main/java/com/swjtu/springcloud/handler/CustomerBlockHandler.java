@@ -8,7 +8,7 @@ import com.swjtu.springcloud.entities.CommonResult;
  * @Date: 2022/8/6 15:39
  * @Description: sentinel自定义限流处理器
  */
-public class CustomerBlockHandler  {
+public class    CustomerBlockHandler  {
 
     public static CommonResult handlerException1(BlockException e) {
         return new CommonResult(444, "按客户自定义的，global handler1");

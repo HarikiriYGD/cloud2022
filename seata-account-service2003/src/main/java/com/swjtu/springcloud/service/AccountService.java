@@ -1,6 +1,7 @@
 package com.swjtu.springcloud.service;
 
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.math.BigDecimal;
 
@@ -17,5 +18,5 @@ public interface AccountService {
      * @param money
      * @return
      */
-    int decrease(@Param("userId") Long userId, @Param("money") BigDecimal money);
+    void decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }

@@ -14,9 +14,7 @@
 
     <!--int decrease(@Param("productId") Long productId, @Param("count") Integer count);-->
     <update id="decrease">
-        update t_storege
-        set used = used + #{count}, residue = residue - #{count}
-        where product_id = #{productId};
+        update t_storage set used = used + #{count}, residue = residue - #{count} where product_id = #{productId};
     </update>
 
 </mapper>
